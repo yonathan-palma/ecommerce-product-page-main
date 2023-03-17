@@ -29,7 +29,7 @@ export default function ImagesWrapper({images, isModal}){
                     <img src={btnLeft} alt="anterior" />
                 </button>
                 }
-                <img className="img_principal" onClick={handleRview} src={`./src/${mainImg.main}`} alt={`Product${mainImg.id}`} />
+                <img className="img_principal" onClick={handleRview} src={`${mainImg.main}`} alt={`Product${mainImg.id}`} />
                 {(isModal || !isDesktop) && <button type="button" className="btnRight" onClick={()=> setIndexImg((indexImg + 1))} >
                     <img src={btnRight} alt="siguiente" />
                 </button>

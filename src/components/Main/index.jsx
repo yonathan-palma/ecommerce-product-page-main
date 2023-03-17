@@ -1,25 +1,33 @@
 import ImagesWrapper from '../ImagesWrapper';
 import './Main.css'
+import product1 from '../../assets/images/image-product-1.jpg';
+import productth1 from '../../assets/images/image-product-1-thumbnail.jpg';
+import product2 from '../../assets/images/image-product-2.jpg';
+import productth2 from '../../assets/images/image-product-2-thumbnail.jpg';
+import product3 from '../../assets/images/image-product-3.jpg';
+import productth3 from '../../assets/images/image-product-3-thumbnail.jpg';
+import product4 from '../../assets/images/image-product-4.jpg';
+import productth4 from '../../assets/images/image-product-4-thumbnail.jpg';
 
 const photosProduct = [
     {
-      photo:'./src/assets/images/image-product-1-thumbnail.jpg',
-      main:'assets/images/image-product-1.jpg',
+      photo: productth1 ,
+      main: product1,
       id:1
     },
     {
-      photo:'./src/assets/images/image-product-2-thumbnail.jpg',
-      main:'assets/images/image-product-2.jpg',
+      photo:productth2,
+      main:product2,
       id:2
     },
     {
-      photo:'./src/assets/images/image-product-3-thumbnail.jpg',
-      main:'assets/images/image-product-3.jpg',
+      photo:productth3,
+      main:product3,
       id:3
     },
     {
-      photo:'./src/assets/images/image-product-4-thumbnail.jpg',
-      main:'assets/images/image-product-4.jpg',
+      photo:productth4 ,
+      main:product4,
       id:4
     }
 ];
