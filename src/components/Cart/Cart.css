@@ -1,0 +1,126 @@
+.profile{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 2.5rem;
+    position: relative;
+}
+
+.toggleCart{
+    background-color: transparent;
+    position: relative;
+}
+.toggleCart:hover{
+    border: none;
+}
+.toggleCart:not(:hover){
+    
+    border: none;
+}
+.profile .cartIcon{
+    cursor: pointer;
+}
+.toggleCart:focus{
+    outline: none;
+}
+.profile .userAvatar{
+    border-radius: 50%;
+    width: 50px;
+    cursor: pointer;
+}
+.profile .userAvatar:hover{
+    outline: solid 3px var(--Orange);
+}
+
+.cart-detail{
+    position: absolute;
+    background-color: var(--White);
+    box-shadow: 0 5px 15px rgb(0 0 0 / 35%);
+    border-radius: 5px;
+    min-width: 320px;
+    top: 80%;
+    right: 0;
+    z-index: 20;
+}
+.cart-detail .cartTitle{
+    text-align: left;
+    padding-left: 18px;
+    border-bottom: solid 3px var(--Lightgrayishblue);
+    color: var(--Verydarkblue);
+}
+.cart-detail .cartItems{
+    height: auto;
+    display: grid;
+    place-content: center;
+}
+.cart-detail .cartItems .isEmpty {
+    color: var(--Darkgrayishblue);
+    font-weight: 700;
+    margin: 3rem 0;
+}
+.cartItems ul{
+    list-style: none;
+    padding: 0;
+}
+.cartItems ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.attachment_img{
+    width: 50px;
+    /* height: 50px; */
+    border-radius: 5px;
+}
+.productDetail{
+    text-align: left;
+}
+.productDetail .cart_item_title{
+    margin: 0;
+    font-weight: 400;
+    color: var(--Darkgrayishblue);
+
+}
+.productDetail .price{
+    color: var(--Darkgrayishblue);
+}
+.amount{
+    font-weight: 700;
+    color: var(--Verydarkblue);
+}
+.deleteIcon{
+    cursor: pointer;
+}
+.cart_items_count{
+    position: absolute;
+    background-color: orange;
+    border-radius: 15px;
+    padding: 2px 8px;
+    top: -5px;
+    left: 55%;
+    font-size: 12px;
+    color: white;
+    font-weight: 700;
+}
+
+.Checkout{
+    width: 100%;
+    background-color: var(--Orange);
+    color: var(--White);
+    margin-bottom: 2rem;
+}
+
+@media (max-width:425px){
+    .profile {
+        gap: 1rem;
+    }
+    .profile .userAvatar{
+        width: 30px;
+    }
+    .cart-detail{
+        right: 0;
+        left: 0;
+        margin: 0 1rem;
+    }
+}
