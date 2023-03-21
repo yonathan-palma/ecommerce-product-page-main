@@ -25,14 +25,23 @@ export default function ImagesWrapper({images, isModal}){
     return(<>  
         <div className="product_img">
             <div className="main_img">
-                {(isModal || !isDesktop) && <button type="button"className="btnLeft" onClick={()=> setIndexImg((indexImg - 1))}>
-                    <img src={btnLeft} alt="anterior" />
-                </button>
+                {(isModal || !isDesktop) && 
+                    <button 
+                        type="button"
+                        className="btnLeft"
+                         onClick={()=>setIndexImg((indexImg > 0 ? indexImg - 1 : 3))}
+                    >
+                        <img src={btnLeft} alt="anterior" />
+                    </button>
                 }
                 <img className="img_principal" onClick={handleRview} src={`${mainImg.main}`} alt={`Product${mainImg.id}`} />
-                {(isModal || !isDesktop) && <button type="button" className="btnRight" onClick={()=> setIndexImg((indexImg + 1))} >
-                    <img src={btnRight} alt="siguiente" />
-                </button>
+                {(isModal || !isDesktop) && 
+                    <button 
+                        type="button" 
+                        className="btnRight"
+                         onClick={()=>setIndexImg((indexImg < 3 ? indexImg + 1 : 0))} >
+                        <img src={btnRight} alt="siguiente" />
+                    </button>
                 }
             </div>
             <MediaQuery minWidth={769}>

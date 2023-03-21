@@ -2,6 +2,7 @@ import { useState } from "react"
 import cartIcon from "../../assets/images/icon-cart.svg"
 import User from "../../assets/images/image-avatar.png";
 import deleteIcon from '../../assets/images/icon-delete.svg';
+import product1 from '../../assets/images/image-product-1.jpg';
 import './Cart.css'
 
 export default function Cart({cartsItem, removeItems}){
@@ -9,7 +10,7 @@ export default function Cart({cartsItem, removeItems}){
     const isEmpty = cartsItem == 0 ? true : false;
 
     const product = {
-        img:'./src/assets/images/image-product-1-thumbnail.jpg',
+        img:product1,
         title:'Fall Limited Edition Sneakers',
         price: 125,
         amount: cartsItem
